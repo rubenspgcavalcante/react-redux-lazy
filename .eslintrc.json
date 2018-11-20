@@ -6,7 +6,8 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "prettier"
+    "plugin:prettier/recommended",
+    "prettier/react"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
@@ -16,6 +17,7 @@
   },
   "plugins": ["prettier", "react"],
   "rules": {
+    "semi": ["error", "always"],
     "no-unused-vars": [
       "error",
       { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
@@ -24,7 +26,7 @@
       "error",
       {
         "jsxBracketSameLine": true,
-        "semi": false,
+        "semi": true,
         "singleQuote": true,
         "trailingComma": "all"
       }

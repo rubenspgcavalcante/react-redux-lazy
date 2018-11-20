@@ -1,11 +1,11 @@
-import { TEST, TEST_CLEAR } from "../actions";
-import { combineReducers } from "redux";
+import { TEST, TEST_CLEAR } from '../actions';
+import { combineReducers } from 'redux';
 
 const rootReducer = (
   state = {
-    test: null
+    test: null,
   },
-  { type, payload }
+  { type, payload },
 ) => {
   switch (type) {
     case TEST:

@@ -1,4 +1,4 @@
-import { TEST, TEST_CLEAR } from "./index";
+import { TEST, TEST_CLEAR } from './index';
 
 let intervalId = null;
 
@@ -8,7 +8,7 @@ export const triggerTest = interval => {
     (intervalId = setInterval(
       () =>
         dispatch({ type: TEST, payload: `Bar triggered ${counter++} times` }),
-      interval
+      interval,
     ));
 };
 

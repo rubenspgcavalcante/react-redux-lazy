@@ -1,11 +1,11 @@
-import React, { Suspense, PureComponent } from "react";
-import { render } from "react-dom";
-import { Provider } from "react-redux";
-import store from "./store";
-import lazyTest from "./containers/lazyTest";
+import React, { Suspense, PureComponent } from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
+import lazyTest from './containers/lazyTest';
 
-const appEl = document.createElement("div");
-appEl.setAttribute("id", "app");
+const appEl = document.createElement('div');
+appEl.setAttribute('id', 'app');
 document.body.appendChild(appEl);
 
 class ActionSelector extends PureComponent {
@@ -28,15 +28,14 @@ class ActionSelector extends PureComponent {
       <>
         <select
           defaultValue={null}
-          onChange={this.selectActionCreator.bind(this)}
-        >
+          onChange={this.selectActionCreator.bind(this)}>
           <option />
           <option value="foo">Select Foo action creator</option>
           <option value="bar">Select Bar action creator</option>
         </select>
         {LazyTest ? (
           <Suspense fallback={<div>Loading...</div>}>
-            <LazyTest hello={"asdasd"} />
+            <LazyTest hello={'asdasd'} />
           </Suspense>
         ) : null}
       </>
@@ -48,5 +47,5 @@ render(
   <Provider store={store}>
     <ActionSelector />
   </Provider>,
-  appEl
+  appEl,
 );
