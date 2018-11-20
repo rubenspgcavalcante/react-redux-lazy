@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "jsx": true,
+    "sourceType": "module"
+  },
+  "plugins": ["prettier", "react"],
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "jsxBracketSameLine": true,
+        "semi": false,
+        "singleQuote": true,
+        "trailingComma": "all"
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "16.6"
+    }
+  }
+}

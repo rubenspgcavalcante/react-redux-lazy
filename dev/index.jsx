@@ -36,7 +36,7 @@ class ActionSelector extends PureComponent {
         </select>
         {LazyTest ? (
           <Suspense fallback={<div>Loading...</div>}>
-            <LazyTest />
+            <LazyTest hello={"asdasd"} />
           </Suspense>
         ) : null}
       </>

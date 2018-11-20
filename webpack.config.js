@@ -6,7 +6,12 @@ const [isDev, isProd] = ["development", "production"].map(env => mode === env);
 module.exports = (env = {}) => ({
   mode,
   devtool: "source-map",
-  entry: isProd ? "./src/index.js" : "./dev/index.jsx",
+  entry: { "react-redux-lazy": isProd ? "./src/index.js" : "./dev/index.jsx" },
+  externals: isDev? {} : {
+    react: "react",
+    redux: "redux",
+    "react-redux": "react-redux"
+  },
   module: {
     rules: [
       {
