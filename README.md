@@ -1,4 +1,5 @@
-# react-redux-lazy
+# React Redux Lazy
+[![npm version](https://badge.fury.io/js/react-redux-lazy.svg)](https://badge.fury.io/js/react-redux-lazy)
 
 ## Lazy Redux connector for React
 
@@ -24,7 +25,7 @@ The `lazyConnect` expects the same parameters as the [**react-redux** `connect`]
 **lazyConnect** can receive a promise that resolves into any of the parameters: "mapStateToProps", "mapDispatchToProps", "mergeProps" and/or options, and it returns a `React.lazy` instance (so remember to wrap the container in a `<Suspense>`).
 You still able to pass the normal values as you do in `connect`, so if you want only lazy map you actions, the only promise you give is the `mapDispatchToPropsPromise`, and pass all the other parameters as you normally does with `connect`.
 
-Example for lazy mapDispatchToProps:
+Example for **lazy mapDispatchToProps**:
 
 ```js
 import { lazyConnect } from "react-redux-lazy";
@@ -56,8 +57,8 @@ export default () =>
 
 ## Container factory
 
-Normally you will want to do the import based on a parameter, so for this you will export not the lazyConnect result directly, but a
-factory that to call it and create the **React.lazy** container for you:
+Normally you will want to do the import based on a parameter, so for this you will export not the LazyConnect result directly, but a
+factory that to call it an
 
 Let's how the example above will be using as a factory:
 
